@@ -1,0 +1,267 @@
+body {
+    background-color: #ecf0f5;
+}
+
+.box-tools {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box-tools button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.box-tools button:hover {
+    background-color: #0056b3;
+}
+
+.box-widget {
+    border: none;
+    position: relative;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-header.with-border {
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.user-block img {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+.user-block .username {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.user-block .description {
+    color: #999;
+    font-size: 13px;
+}
+
+.user-block .username,
+.user-block .description,
+.user-block .comment {
+    display: block;
+    margin-left: 50px;
+}
+
+.btn-box-tool {
+    padding: 5px;
+    font-size: 12px;
+    background: transparent;
+    color: #97a0b3;
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+.pad {
+    padding: 10px;
+}
+
+.box .forum-btn {
+    background-color: #f4f4f4;
+    color: #444;
+    border-color: #ddd;
+}
+
+.forum-botton {
+    display: flex;
+    align-items: center;
+}
+
+.forum-btn {
+    margin-right: 10px;
+}
+
+.fa {
+    font-size: 20px;
+}
+
+.watch-comments {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.watch-comments div {
+    margin-left: 10px;
+}
+
+.box-comments {
+    /* background: #f7f7f7 !important; */
+}
+
+.box-footer {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top: 1px solid #f4f4f4;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.box-comments .box-comment:first-of-type {
+    padding-top: 0;
+}
+
+.box-comments .box-comment {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.img-sm,
+.box-comments .box-comment img,
+.user-block.user-block-sm img {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.img-sm,
+.img-md,
+.img-lg,
+.box-comments .box-comment img,
+.user-block.user-block-sm img {
+    float: left;
+}
+
+.box-comments .comment-text {
+    margin-left: 40px;
+    color: #555;
+}
+
+.box-comments .username {
+    color: #444;
+    display: block;
+    font-weight: 600;
+}
+
+.box-comments .text-muted {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.img-sm+.img-push {
+    margin-left: 40px;
+}
+
+.box .form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #d2d6de;
+}
+
+.attachment-block {
+    border: 1px solid #f4f4f4;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: #f7f7f7;
+}
+
+.attachment-block .attachment-img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    height: auto;
+    float: left;
+}
+
+.attachment-block .attachment-heading .h4,
+.attachment-block .attachment-heading h4 {
+    font-size: 18px;
+}
+
+.delete-and-edit-replies {
+    display: flex;
+    justify-content: flex-end;
+    /* 將內容靠右對齊 */
+    align-items: center;
+    /* 將內容垂直居中 */
+}
+
+.delete-and-edit-replies button {
+    margin-left: 10px;
+    /* 設置按鈕之間的間距 */
+    padding: 8px 16px;
+    /* 設置按鈕內容的填充 */
+    border: none;
+    /* 移除邊框 */
+    border-radius: 5px;
+    /* 添加圓角 */
+    background-color: #dc3545;
+    /* 設置背景顏色 */
+    color: white;
+    /* 設置文字顏色 */
+    font-size: 14px;
+    /* 設置文字大小 */
+    cursor: pointer;
+    /* 設置滑鼠指標樣式 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    /* 添加陰影效果 */
+    transition: background-color 0.3s, transform 0.2s;
+    /* 添加過渡效果 */
+}
+
+.delete-and-edit-replies button:hover {
+    background-color: #c82333;
+    /* 滑鼠懸停時改變背景顏色 */
+    transform: translateY(-2px);
+    /* 滑鼠懸停時添加向上移動的效果 */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-reply {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.submit-reply:hover {
+    background-color: #0056b3;
+}

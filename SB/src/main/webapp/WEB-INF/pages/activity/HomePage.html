@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>活動首頁</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .header {
+            text-align: center;
+            margin: 40px 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4e73df;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            letter-spacing: 0.1em; /* 增加字母間距 */
+        }
+
+        .header form,
+        .header a {
+            margin: 10px 5px;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <script src="/js/layout/Z_slider.js"></script>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <script src="/js/layout/Z_TopBar.js"></script>
+
+                <!-- 主要內容 -->
+                <div class="header">
+                    <h2>活 動 首 頁</h2>
+
+                    <form class="abc" method="get" action="OneEvent" style="display: inline-block; margin-right: 10px;">
+                        <label for="eventNo">查詢活動編號:</label>
+                        <input type="text" name="eventNo" />
+                        <input type="submit" value="查詢" class="btn btn-primary" />
+                    </form>
+
+                    <!-- 使用Bootstrap的按鈕風格 -->
+                    <a href="AllEvents" class="btn btn-primary" style="display: inline-block;">查詢全部活動</a><br>
+                    <br>
+
+                    <form method="get" action="activityInsertpage" style="display: inline-block; margin-right: 10px;">
+                        <button type="submit" class="btn btn-success">新增活動</button>
+                    </form>
+
+                    <a href="ManagerIndex" class="btn btn-info">回首頁</a><br>
+                </div>
+
+                <!-- 主要內容結尾 -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- footer -->
+            <script src="/js/layout/Z_footer.js"></script>
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <script src="/js/layout/Z_Logout Modal.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/js/demo/chart-area-demo.js"></script>
+    <script src="/js/demo/chart-pie-demo.js"></script>
+
+</body>
+
+</html>

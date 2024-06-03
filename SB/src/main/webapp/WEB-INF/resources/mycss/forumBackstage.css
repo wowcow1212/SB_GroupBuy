@@ -1,0 +1,78 @@
+/* 按鈕藍色樣式 */
+.btn-blue {
+    background-color: #007bff; /* 背景顏色 */
+    color: #fff; /* 文字顏色 */
+    border: none; /* 移除邊框 */
+    outline: none; /* 移除外框 */
+    transition: background-color 0.3s ease; /* 添加過渡效果 */
+}
+
+/* 按鈕綠色樣式 */
+.btn-green {
+    background-color: #28a745; /* 背景顏色 */
+    color: #fff; /* 文字顏色 */
+    border: none; /* 移除邊框 */
+    outline: none; /* 移除外框 */
+    transition: background-color 0.3s ease; /* 添加過渡效果 */
+}
+
+/* 按鈕紅色樣式 */
+.btn-red {
+    background-color: #dc3545; /* 背景顏色 */
+    color: #fff; /* 文字顏色 */
+    border: none; /* 移除邊框 */
+    outline: none; /* 移除外框 */
+    transition: background-color 0.3s ease; /* 添加過渡效果 */
+}
+
+/* 按鈕黃色樣式 */
+.btn-yellow {
+    background-color: #ffc107; /* 背景顏色 */
+    color: #fff; /* 文字顏色 */
+    border: none; /* 移除邊框 */
+    outline: none; /* 移除外框 */
+    transition: background-color 0.3s ease; /* 添加過渡效果 */
+}
+
+/* 標題樣式 */
+h1 {
+    text-align: center; /* 文字置中 */
+    font-weight: bold; /* 粗體 */
+    margin-top: 20px; /* 上邊距 */
+    margin-bottom: 20px; /* 下邊距 */
+}
+
+/* 導航欄搜尋欄樣式 */
+.navbar-search {
+    display: none !important; /* 隱藏 */
+}
+
+/* 表格容器樣式 */
+.table-container {
+    max-width: 1500px; /* 最大寬度 */
+    margin: 0 auto; /* 水平置中 */
+}
+
+/* 表格表頭樣式 */
+th {
+    background-color: #f2f2f2; /* 表頭背景顏色 */
+    padding: 8px; /* 內邊距 */
+    color: rgb(0, 0, 0); /* 文字顏色 */
+}
+
+/* 表格單元格樣式 */
+th, td {
+    max-width: 200px; /* 最大寬度 */
+    overflow: hidden; /* 超出部分隱藏 */
+    text-overflow: ellipsis; /* 文字省略 */
+    white-space: nowrap; /* 不換行 */
+    border: 1px solid rgb(128, 128, 128); /* 表格線 */
+    padding: 8px; /* 內邊距 */
+    color: rgb(0, 0, 0); /* 文字顏色 */
+    transition: background-color 0.3s ease; /* 添加過渡效果 */
+}
+
+/* DataTables行懸停時的樣式 */
+table.dataTable tbody tr:hover {
+    background-color: #f2f2f2; /* 反灰顏色 */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創建帳號</title>
+</head>
+
+<body>
+    <h1>創建帳號</h1>
+    <form method="post" action="userSignUp">
+        <span>帳號：</span><input type="text" name="account">
+        <br><br>
+        <span>密碼：</span><input type="password" name="password"><input class="showPassword" type="checkbox">顯示密碼
+        <br><br>
+        <span>再次密碼：</span><input type="password" name="checkPassword"><input class="showPassword" type="checkbox">顯示密碼
+        <br><br>
+        <span>中文姓名：</span><input type="text" name="UCName">
+        <br><br>
+        <span>英文名：</span><input type="text" name="UEName">
+        <br><br>
+        <span>電子郵件：</span><input type="text" name="Email">
+        <br><br>
+        <span>生日：</span><input type="date" name="Birthday"> 
+        <br><br>
+        <span>電話：</span><input type="text" name="Phone">
+        <br><br>
+        <span>地址：</span><input type="text" name="UserAddress">
+        <br><br>
+        <span>性別：</span>
+        <select name="gender" id="">
+            <option value="1">生理男</option>
+            <option value="0">生理女</option>
+        </select>
+        <br><br>
+        
+        <span>創建管理員金鑰：</span><input type="text" name="key">
+        
+        <input type="submit" value="創建">
+    </form>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $(function () {
+            $(".showPassword").click(function () {
+                if ($(this).is(":checked")) {
+                    $(this).prev().attr("type", "text")
+                }
+                else {
+                    $(this).prev().attr("type", "password")
+                }
+
+            });
+        });
+    </script>
+</body>
+
+</html>

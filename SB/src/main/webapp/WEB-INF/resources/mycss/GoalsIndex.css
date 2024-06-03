@@ -1,0 +1,167 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+}
+
+.header {
+	background-color: #333;
+	color: white;
+	padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav li {
+	margin-right: 20px;
+}
+
+.nav li a {
+	color: white;
+	text-decoration: none;
+}
+
+.content {
+	padding: 20px;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: center; /* 將表格数据居中對齊 */
+	padding: 8px;
+	border-bottom: 1px solid #ddd;
+}
+
+tr {
+  text-align: center;
+}
+
+th {
+    display: table-cell;
+	background-color: #f2f2f2;
+}
+
+
+tr:hover {
+	background-color: #f5f5f5;
+}
+
+.button {
+	border: none;
+	color: white;
+	padding: 6px 12px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 14px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.button.update {
+	background-color: #009688;
+}
+
+.button.delete {
+	background-color: #f44336;
+}
+
+.button.insert {
+	background-color: #1E9FFF;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 20px;
+}
+
+.button.select {
+	background-color: #009688;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 20px;
+}
+
+.button.refresh {
+	background-color: #FFB800;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 20px;
+}
+
+.button.delete-batch{
+	background-color: #D12433;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 20px;
+}
+
+.search-container {
+	text-align: center; /* 内容水平居中對齊 */
+	margin: 0 auto; /* 整个容器水平居中對齊 */
+	margin-bottom: 50px; /* 可選：添加底部邊距 */
+}
+
+.search-container span {
+	margin-right: 10px;
+}
+
+.search-container input, .search-container select {
+	margin-right: 20px;
+	padding: 6px 12px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.pagination span, .pagination input, .pagination select {
+	margin-right: 10px;
+}
+
+.pagination input {
+	width: 50px;
+	text-align: center;
+}
+
+.separator {
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 20px;
+}
+
+h2 {
+	text-align: center; /* 將標題置中 */
+}
+
+
+#addModal .modal-content {
+    /* 添加更高優先級的樣式 */
+    z-index: 1050; /* 確保新增模態框在最前面 */
+}
+
+.insert {
+    margin-bottom: 20px; /* 調整按鈕下方的外邊距 */
+}
+
+.icon svg {
+  fill: gray;
+}

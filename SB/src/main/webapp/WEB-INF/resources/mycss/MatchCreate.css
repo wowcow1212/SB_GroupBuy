@@ -1,0 +1,177 @@
+/*custom font*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/*basic reset*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#custom-container {
+	font-family: montserrat, arial, verdana;
+	/*新的背景色*/
+	background:
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2042508-jpeg.jpg");
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+}
+
+/*form styles*/
+#msform {
+	width: 400px; /*調表單的寬度*/
+	margin: 50px auto;
+	text-align: center;
+	/*position: relative;*/
+	position: absolute;
+	top: 40%;
+	left: 50%; /*調表單的位置*/
+	transform: translate(calc(-50% + 0px), -50%); /*平移*/
+}
+
+#msform fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+
+.form-control {
+	height: 50px; /*男女框大小*/
+}
+
+.icon-button {
+	border: none;
+	background: none;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+}
+
+.icon-button:focus {
+	outline: none;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+	display: none;
+}
+
+/*inputs*/
+#msform input, #msform textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+/*buttons*/
+#msform .action-button {
+	width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px;
+	margin: 10px 5px;
+	text-decoration: none;
+	font-size: 14px;
+	display: inline-block;
+	/* Make it inline-block to match behavior of anchor tags */
+}
+
+#msform .action-button:hover, #msform .action-button:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+/*headings*/
+.fs-title {
+	font-size: 23px;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+}
+
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+
+/*progressbar*/
+#progressbar {
+	margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+	list-style-type: none;
+}
+
+#progressbar li {
+	color: white;
+	text-transform: uppercase;
+	font-size: 9px;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+
+#progressbar li:before {
+	content: counter(step);
+	counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 10px;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none;
+}
+
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+	background: #27AE60;
+	color: white;
+}
+/* Hide all fieldsets except the first one */
+fieldset:not(:first-of-type) {
+	display: none;
+}

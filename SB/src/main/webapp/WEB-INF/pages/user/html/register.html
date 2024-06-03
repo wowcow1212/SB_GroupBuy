@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>SB - Register</title>
+
+	<!-- Custom fonts for this template-->
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link
+		href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+
+	<!-- Custom styles for this template-->
+	<link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+	<!-- 要用datetime picker-->
+	<!-- <link href="https://cdn.bootcss.com/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"
+		rel="stylesheet" /> -->
+
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body class="bg-gradient-primary">
+
+	<div class="container">
+
+		<div class="card o-hidden border-0 shadow-lg my-5">
+			<div class="card-body p-0">
+				<!-- Nested Row within Card Body -->
+				<div class="row">
+					<div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+					<div class="col-lg-7">
+						<div class="p-5">
+							<div class="text-center">
+								<h1 class="h4 text-gray-900 mb-4">歡迎加入Social Book！</h1>
+							</div>
+
+							<form class="user" method="post" action="userSignUp" enctype="multipart/form-data">
+
+								<div class="form-group row">
+									<figure class="figure col-md-4 col-sm-5 col-xs-12">
+										<img class="rounded responsive mw-100" id="avatarImg"
+											src="https://teameowdev.files.wordpress.com/2016/04/avatar24-01.png" alt="">
+									</figure>
+									<div
+										class="form-inline col-md-8 col-sm-7 col-xs-12 row d-flex align-items-end mb-3">
+										<input type="file" name="avatar" class="file-uploader pull-left col-9"
+											onchange="selectImgFile(this.files)">
+
+
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="text" class="form-control form-control-user" id="UCName"
+											placeholder="中文姓名" name="UCName" autocomplete="off">
+									</div>
+									<div class="col-sm-6">
+										<input type="text" class="form-control form-control-user" id="UEName"
+											placeholder="英文姓名" name="UEName" autocomplete="off">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="text" class="form-control form-control-user" id="account"
+											placeholder="帳號" name="account" autocomplete="off">
+									</div>
+									<div class="col-sm-6">
+										<input type="email" class="form-control form-control-user" id="Email"
+											placeholder="電子郵件" name="Email" autocomplete="off">
+									</div>
+
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<input type="password" class="form-control form-control-user" id="password"
+											placeholder="密碼" name="password">
+									</div>
+									<div class="col-sm-6">
+										<input type="password" class="form-control form-control-user"
+											id="repeatPassword" placeholder="再次輸入密碼">
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-sm-6 mb-3 mb-sm-0">
+										<select class="form-control rounded-pill h-100 d-inline-block" id="genderSelect"
+											name="gender">
+											<option selected>請選擇性別</option>
+											<option value="1">生理男</option>
+											<option value="0">生理女</option>
+										</select>
+									</div>
+									<div class=" col-sm-6 mb-3 mb-sm-0">
+										<input class="form-control form-control-user" type="date" name="Birthday"
+											id="Birthday">
+									</div>
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control form-control-user" id="Phone"
+										placeholder="電話" name="Phone" autocomplete="off">
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control form-control-user" id="UserAddress"
+										placeholder="地址" name="UserAddress" autocomplete="off">
+								</div>
+
+								<!-- 是否為管理員 -->
+								<div class="form-group row">
+									<div class="col-sm-3 mb-3 mb-sm-0">
+										<button class="btn btn-info btn-user btn-block" id="isManager">我是管理員</button>
+									</div>
+									<div class=" col-sm-9 mb-3 mb-sm-0">
+										<input class="form-control form-control-user" type="text" name="key" id="key"
+											placeholder="管理者金鑰" hidden>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-9 mb-3 mb-sm-0">
+										<button type="submit" class="btn btn-primary btn-user btn-block">註冊帳號</button>
+									</div>
+									<div class="col-sm-3 mb-3 mb-sm-0">
+										<button class="btn btn-warning btn-user btn-block" id="oneToInput">一鍵輸入</button>
+									</div>
+
+								</div>
+
+								<!-- <a href="login.html" class="btn btn-primary btn-user btn-block">
+									註冊帳號
+								</a> -->
+								<hr>
+								<a href="" class="btn btn-google btn-user btn-block" id="googleLogin">
+									<i class="fab fa-google fa-fw"></i> 使用Google創建帳號
+								</a>
+								<a href="index.html" class="btn btn-facebook btn-user btn-block">
+									<i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+								</a>
+							</form>
+							<hr>
+							<div class="text-center">
+								<a class="small" href="forgot-password.html">Forgot Password?</a>
+							</div>
+							<div class="text-center">
+								<a class="small" href="login.html">Already have an account? Login!</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin-2.min.js"></script>
+
+	<!-- Google 第三方登入需要的東西 -->
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<script>
+		// $("#oneToInput").on("click", function (e) {
+		// 	e.defaultPrevented();
+		// });
+		document.querySelector("#oneToInput").addEventListener("click", function (e) {
+			e.preventDefault();
+			$("#UCName").val("黃勢斌");
+			$("#UEName").val("Neo");
+			$("#Email").val("aa00516838@gmail.com");
+			$("#account").val("zzz");
+			$("#password").val("123");
+			$("#repeatPassword").val("123");
+			$("#genderSelect").val("1");
+			$("#Birthday").val("1997-11-01");
+			$("#Phone").val("0972874898");
+			$("#UserAddress").val("台南市關廟區東勢里和平路22巷9弄5號");
+		});
+
+		document.querySelector("#isManager").addEventListener("click", function (e) {
+			e.preventDefault();
+			document.querySelector("#key").hidden = false;
+		});
+
+		function selectImgFile(files) {
+			if (!files.length) {
+				return false;
+			}
+
+			let file = files[0];
+			let reader = new FileReader();
+			reader.onload = function () {
+				document.querySelector('#avatarImg').src = this.result;
+			};
+
+			reader.readAsDataURL(file);
+		}
+
+		//第三方登入
+		function initGoogleLogin() {
+			gapi.load('auth2', function () {
+				gapi.auth2.init({
+					client_id: '443989407598-j91o8of7q5mra4h5br1ujtputrf05pvv.apps.googleusercontent.com'
+				}).then(function (googleAuth) {
+					var googleLoginBtn = document.getElementById('googleLogin');
+					googleLoginBtn.onclick = function () {
+						googleAuth.signIn().then(function (googleUser) {
+							// 處理登入成功的回調
+							var profile = googleUser.getBasicProfile();
+							console.log('Full Name: ' + profile.getName());
+							console.log('Email: ' + profile.getEmail());
+						}, function (error) {
+							// 處理登入失敗的回調
+							console.error('Google Login Error:', error);
+						});
+					};
+				});
+			});
+		}
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>購買點數</title>
+  <link rel="stylesheet" href="/mycss/linepay.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body style="background-color: #FFFFF4;">
+  <section id="pricing" class="pricing-content section-padding">
+    <div class="container">
+      <div class="section-title text-center">
+        <h2>點數購買</h2>
+        <h4>一次儲值越多 回饋越多</h4>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0" style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.1s;
+              animation-name: fadeInUp;
+            ">
+          <div class="pricing_design">
+            <div class="single-pricing">
+              <div class="price-head">
+                <h2>SB點數:100點</h2>
+                <h1 class="price">$100</h1>
+              </div>
+              <ul></ul>
+              <div class="pricing-price"></div>
+              <a href="#" class="price_btn" id="100point">購買</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"
+          data-wow-offset="0" style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.2s;
+              animation-name: fadeInUp;
+            ">
+          <div class="pricing_design">
+            <div class="single-pricing">
+              <div class="price-head">
+                <h2>SB點數:310</h2>
+                <h1 class="price">$300</h1>
+              </div>
+              <ul></ul>
+              <div class="pricing-price"></div>
+              <a href="#" class="price_btn" id="300point">購買</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
+          data-wow-offset="0" style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            ">
+          <div class="pricing_design">
+            <div class="single-pricing">
+              <div class="price-head">
+                <h2>SB點數:520</h2>
+                <h1 class="price">$500</h1>
+              </div>
+              <ul></ul>
+              <div class="pricing-price"></div>
+              <a href="#" class="price_btn" id="500point">購買</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
+          data-wow-offset="0" style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            ">
+          <div class="pricing_design">
+            <div class="single-pricing">
+              <div class="price-head">
+                <h2>SB點數:1050</h2>
+                <h1 class="price">$1000</h1>
+              </div>
+              <ul></ul>
+              <div class="pricing-price"></div>
+              <a href="#" class="price_btn" id="1000point">購買</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
+          data-wow-offset="0" style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            ">
+          <div class="pricing_design">
+            <div class="single-pricing">
+              <div class="price-head">
+                <h2>SB點數:2150</h2>
+                <h1 class="price">$2000</h1>
+              </div>
+              <ul></ul>
+              <div class="pricing-price"></div>
+              <a href="#" class="price_btn" id="2000point">購買</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s"
+          data-wow-offset="0" style="
+              visibility: visible;
+              animation-duration: 1s;
+              animation-delay: 0.3s;
+              animation-name: fadeInUp;
+            ">
+          <div class="pricing_design">
+            <div class="single-pricing">
+              <div class="price-head">
+                <h2>SB點數:3250</h2>
+                <h1 class="price">$3000</h1>
+              </div>
+              <ul></ul>
+              <div class="pricing-price"></div>
+              <a href="#" class="price_btn" id="3000point">購買</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    $(document).ready(function () {
+      $("#100point").click(function () {
+        const data = {
+          productName: "SB:100點",
+          amount: 100,
+          currency: "TWD",
+          confirmUrl: "http://localhost:8080/group/groups100",
+        };
+        Swal.fire({
+          title: "確定要購買嗎",
+          text: "確定後畫面會導向LinePay付款",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "確定",
+          cancelButtonText: "取消",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: "/getLinePay",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify(data),
+              success: function (response) {
+                console.log("Success:", response);
+                window.location.href = response;
+              },
+            });
+          }
+        });
+      });
+
+      $("#300point").click(function () {
+        const data = {
+          productName: "SB:310點",
+          amount: 300,
+          currency: "TWD",
+          confirmUrl: "http://localhost:8080/group/groups300",
+        };
+        Swal.fire({
+          title: "確定要購買嗎",
+          text: "確定後畫面會導向LinePay付款",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "確定",
+          cancelButtonText: "取消",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: "/getLinePay",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify(data),
+              success: function (response) {
+                console.log("Success:", response);
+                window.location.href = response;
+              },
+            });
+          }
+        });
+      });
+
+      $("#500point").click(function () {
+        const data = {
+          productName: "SB:520點",
+          amount: 500,
+          currency: "TWD",
+          confirmUrl: "http://localhost:8080/group/groups500",
+        };
+        Swal.fire({
+          title: "確定要購買嗎",
+          text: "確定後畫面會導向LinePay付款",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "確定",
+          cancelButtonText: "取消",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: "/getLinePay",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify(data),
+              success: function (response) {
+                console.log("Success:", response);
+                window.location.href = response;
+              },
+            });
+          }
+        });
+      });
+
+      $("#1000point").click(function () {
+        const data = {
+          productName: "SB:1050點",
+          amount: 1000,
+          currency: "TWD",
+          confirmUrl: "http://localhost:8080/group/groups1000",
+        };
+        Swal.fire({
+          title: "確定要購買嗎",
+          text: "確定後畫面會導向LinePay付款",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "確定",
+          cancelButtonText: "取消",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: "/getLinePay",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify(data),
+              success: function (response) {
+                console.log("Success:", response);
+                window.location.href = response;
+              },
+            });
+          }
+        });
+      });
+
+      $("#2000point").click(function () {
+        const data = {
+          productName: "SB:2150點",
+          amount: 2000,
+          currency: "TWD",
+          confirmUrl: "http://localhost:8080/group/groups2000",
+        };
+        Swal.fire({
+          title: "確定要購買嗎",
+          text: "確定後畫面會導向LinePay付款",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "確定",
+          cancelButtonText: "取消",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: "/getLinePay",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify(data),
+              success: function (response) {
+                console.log("Success:", response);
+                window.location.href = response;
+              },
+            });
+          }
+        });
+      });
+
+      $("#3000point").click(function () {
+        const data = {
+          productName: "SB:3250點",
+          amount: 3000,
+          currency: "TWD",
+          confirmUrl: "http://localhost:8080/group/groups3000",
+        };
+        Swal.fire({
+          title: "確定要購買嗎",
+          text: "確定後畫面會導向LinePay付款",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "確定",
+          cancelButtonText: "取消",
+        }).then((result) => {
+          if (result.isConfirmed) {
+            $.ajax({
+              url: "/getLinePay",
+              type: "POST",
+              contentType: "application/json",
+              data: JSON.stringify(data),
+              success: function (response) {
+                console.log("Success:", response);
+                window.location.href = response;
+              },
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

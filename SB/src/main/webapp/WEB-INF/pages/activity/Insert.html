@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>新增活動</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <style>
+        .header {
+            text-align: center;
+            margin: 40px 0;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4e73df;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            letter-spacing: 0.1em; /* 增加字母間距 */
+        }
+
+        label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #4e73df;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .file-label:hover {
+            background-color: #0056b3;
+        }
+
+        .file-info {
+            display: inline-block;
+            padding: 10px 20px;
+            color: #6c757d;
+            margin-left: 10px;
+            font-size: 1rem;
+            vertical-align: middle;
+        }
+
+        .btn-icon-split {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-icon-split .icon {
+            margin-right: 5px;
+        }
+
+        .btn-icon-split:hover {
+            background-color: #218838;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <script src="js/layout/Z_slider.js"></script>
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <script src="js/layout/Z_TopBar.js"></script>
+
+                <!-- 主要內容 -->
+                <div class="header">
+                    <h2>新增活動</h2>
+                </div>
+                <div align="center">
+                    <form action="InsertEvent" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="put">
+                        <label for="title">標題:</label><br>
+                        <input type="text" name="title" id="title" required><br>
+                        <label for="description">描述:</label><br>
+                        <textarea name="description" id="description" required></textarea><br>
+                        <label for="activityTime">活動時間:</label><br>
+                        <input type="datetime-local" name="activityTime" id="activityTime"><br>
+                        <label for="signupStartTime">報名開始時間:</label><br>
+                        <input type="datetime-local" name="signupStartTime" id="signupStartTime"><br>
+                        <label for="signupEndTime">報名結束時間:</label><br>
+                        <input type="datetime-local" name="signupEndTime" id="signupEndTime"><br>
+                        <label for="location">地點:</label><br>
+                        <input type="text" name="location" id="location" required><br>
+                        <label for="status">狀態:</label><br>
+                        <input type="text" name="status" id="status" required><br>
+                        <label for="imagepath">活動圖片:</label><br>
+                        <label for="imagepath" class="file-label">選擇檔案</label>
+                        <span class="file-info">未選擇任何檔案</span>
+                        <input type="file" name="imagePath" id="imagepath" required><br>
+                        <!-- 使用圖標分割按鈕 -->
+                        <button type="submit" class="btn btn-success btn-icon-split">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-check"></i>
+                            </span>
+                            <span class="text">確定</span>
+                        </button>
+                        <!-- 一鍵輸入按鈕 -->
+                        <button type="button" class="btn btn-info btn-icon-split" id="oneToInput">
+                            <span class="icon text-white-50">
+                                <i class="fas fa-magic"></i>
+                            </span>
+                            <span class="text">一鍵輸入</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- 主要內容結尾 -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- footer -->
+            <script src="js/layout/Z_footer.js"></script>
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <script src="js/layout/Z_Logout Modal.js"></script>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+
+    <script>
+        // 當用戶選擇文件後，更新文件名稱
+        document.getElementById('imagepath').addEventListener('change', function () {
+            var fileName = this.files[0] ? this.files[0].name : '未選擇任何檔案';
+            document.querySelector('.file-info').textContent = fileName;
+        });
+
+        // 一鍵輸入功能
+        document.getElementById('oneToInput').addEventListener('click', function () {
+            document.getElementById('title').value = "低音號演奏會";
+            document.getElementById('description').value = "這是一次精彩演奏會，將在音樂學系音樂廳舉行。";
+            document.getElementById('activityTime').value = "2024-06-01T09:00";
+            document.getElementById('signupStartTime').value = "2024-05-01T09:00";
+            document.getElementById('signupEndTime').value = "2024-05-31T18:00";
+            document.getElementById('location').value = "台灣藝術大學";
+            document.getElementById('status').value = "報名中";
+        });
+    </script>
+
+</body>
+
+</html>
